@@ -5,31 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analysis Results</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
 </head>
 <body>
     <div class="container">
-        <h1>Analysis Results</h1>
+        <header>
+            <h1>Analysis Results</h1>
+            <p>Summary of detected suspicious activity.</p>
+        </header>
+        <main>
+            <section class="results-section">
+                <h2>Suspicious IPs</h2>
+                {% if suspicious_ips %}
+                <div class="results-terminal">
+                    {% for ip, count in suspicious_ips.items() %}
+                    <p>&gt; <span class="ip">{{ ip }}</span> - Failed Attempts: <span class="count">{{ count }}</span></p>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <p class="no-results">No suspicious IPs detected.</p>
+                {% endif %}
+            </section>
 
-        <h2>Suspicious IPs</h2>
-        {% if suspicious_ips %}
-        <ul>
-            {% for ip, count in suspicious_ips.items() %}
-            <li>{{ ip }} (Failed Attempts: {{ count }})</li>
-            {% endfor %}
-        </ul>
-        {% else %}
-        <p>No suspicious IPs detected.</p>
-        {% endif %}
-
-        <h2>Detailed Log</h2>
-        <ul>
-            {% for ip, count in detailed_log.items() %}
-            <li>{{ ip }}: {{ count }} failed attempts</li>
-            {% endfor %}
-        </ul>
-
-        <a href="/">Analyze Another Log</a>
+            <section class="detailed-log">
+                <h2>Detailed Log</h2>
+                <div class="results-terminal">
+                    {% for ip, count in detailed_log.items() %}
+                    <p>&gt; <span class="ip">{{ ip }}</span> - {{ count }} failed attempts</p>
+                    {% endfor %}
+                </div>
+            </section>
+            <a href="/" class="btn-back">Analyze Another Log</a>
+        </main>
     </div>
 </body>
 </html>
