@@ -4,16 +4,21 @@ body {
     font-family: "Courier New", Courier, monospace;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;     /* Vertically center */
+    height: 100vh;           /* Full viewport height */
 }
 
 .container {
     max-width: 800px;
-    margin: 0 auto;
     padding: 20px;
     border: 1px solid #333;
     background-color: #1e1e1e;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;  /* Ensure it takes full width within max-width */
+    box-sizing: border-box; /* To include padding in the width */
 }
 
 header h1 {
