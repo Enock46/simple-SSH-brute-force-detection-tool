@@ -1,0 +1,18 @@
+Jan 1 10:12:34 server sshd[12345]: Failed password for root from 192.168.1.100 port 53784 ssh2
+Jan 1 10:12:36 server sshd[12346]: Failed password for invalid user admin from 192.168.1.101 port 53785 ssh2
+Jan 1 10:12:38 server sshd[12347]: Failed password for root from 192.168.1.102 port 53786 ssh2
+Jan 1 10:12:40 server sshd[12348]: Failed password for invalid user guest from 192.168.1.103 port 53787 ssh2
+Jan 1 10:12:42 server sshd[12349]: Failed password for root from 192.168.1.100 port 53788 ssh2
+Jan 1 10:12:44 server sshd[12350]: Failed password for invalid user test from 192.168.1.104 port 53789 ssh2
+Jan 1 10:12:46 server sshd[12351]: Failed password for root from 192.168.1.100 port 53790 ssh2
+Jan 1 10:12:48 server sshd[12352]: Failed password for invalid user ubuntu from 192.168.1.105 port 53791 ssh2
+Jan 1 10:12:50 server sshd[12353]: Failed password for root from 192.168.1.102 port 53792 ssh2
+Jan 1 10:12:52 server sshd[12354]: Failed password for root from 192.168.1.106 port 53793 ssh2
+Jan 1 10:12:54 server sshd[12355]: Failed password for invalid user admin from 192.168.1.107 port 53794 ssh2
+Jan 1 10:12:56 server sshd[12356]: Failed password for root from 192.168.1.100 port 53795 ssh2
+Jan 1 10:12:58 server sshd[12357]: Failed password for invalid user admin from 192.168.1.108 port 53796 ssh2
+Jan 1 10:13:00 server sshd[12358]: Failed password for root from 192.168.1.109 port 53797 ssh2
+Jan 1 10:13:02 server sshd[12359]: Failed password for root from 192.168.1.100 port 53798 ssh2
+Jan 1 10:13:04 server sshd[12360]: Failed password for root from 192.168.1.102 port 53799 ssh2
+Jan 1 10:13:06 server sshd[12361]: Failed password for invalid user user from 192.168.1.110 port 53800 ssh2
+Jan 1 10:13:08 server sshd[12362]: Failed password for root from 192.168.1.111 port 53801 ssh2
