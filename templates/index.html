@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSH Log Analyzer</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>SSH Brute-Force Detection</h1>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <label for="log_file">Upload Log File:</label>
+            <input type="file" name="log_file" id="log_file" required>
+
+            <label for="threshold">Failed Attempts Threshold:</label>
+            <input type="number" name="threshold" id="threshold" value="5" min="1">
+
+            <button type="submit">Analyze Logs</button>
+        </form>
+    </div>
+</body>
+</html>

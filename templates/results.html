@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Analysis Results</h1>
+
+        <h2>Suspicious IPs</h2>
+        {% if suspicious_ips %}
+        <ul>
+            {% for ip, count in suspicious_ips.items() %}
+            <li>{{ ip }} (Failed Attempts: {{ count }})</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No suspicious IPs detected.</p>
+        {% endif %}
+
+        <h2>Detailed Log</h2>
+        <ul>
+            {% for ip, count in detailed_log.items() %}
+            <li>{{ ip }}: {{ count }} failed attempts</li>
+            {% endfor %}
+        </ul>
+
+        <a href="/">Analyze Another Log</a>
+    </div>
+</body>
+</html>
